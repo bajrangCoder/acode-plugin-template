@@ -2,10 +2,10 @@ const path = require('path');
 const fs = require('fs');
 const jszip = require('jszip');
 
-const iconFile = path.join(__dirname, '../icon.png');
-const pluginJSON = path.join(__dirname, '../plugin.json');
-const readmeDotMd = path.join(__dirname, '../readme.md');
-const distFolder = path.join(__dirname, '../dist');
+const iconFile = path.join(__dirname, './icon.png');
+const pluginJSON = path.join(__dirname, './plugin.json');
+const readmeDotMd = path.join(__dirname, './readme.md');
+const distFolder = path.join(__dirname, './dist');
 
 // create zip file of dist folder
 
@@ -19,7 +19,7 @@ loadFile('', distFolder);
 
 zip
   .generateNodeStream({ type: 'nodebuffer', streamFiles: true })
-  .pipe(fs.createWriteStream(path.join(__dirname, '../dist.zip')))
+  .pipe(fs.createWriteStream(path.join(__dirname, './dist.zip')))
   .on('finish', () => {
     console.log('dist.zip written.');
   });
