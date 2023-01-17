@@ -1,15 +1,16 @@
 {
-  "id": "acode.plugin",
+  "id": "com.examaple.plugin",
   "name": "Plugin",
-  "type": "",
   "main": "dist/main.js",
   "version": "1.0.0",
   "readme": "readme.md",
   "icon": "icon.png",
   "files": [],
+  "price": 0,
   "author": {
     "name": "",
     "email": "",
+    "url": "",
     "github": ""
   }
 }
