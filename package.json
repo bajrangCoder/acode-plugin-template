@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.0",
     "ip": "^1.1.8",
+    "jszip": "^3.10.1",
     "live-server": "^1.2.2",
     "html-tag-js": "^1.1.22",
     "webpack": "^5.75.0",
