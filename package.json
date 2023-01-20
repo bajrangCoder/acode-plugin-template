@@ -5,8 +5,8 @@
   "main": "dist/main.js",
   "scripts": {
     "start-dev": "node .devServer/start-dev",
-    "build": "webpack",
-    "build-release": "webpack --mode production"
+    "build": "webpack && node pack-zip.js",
+    "build-release": "webpack --mode production && pack-zip.js"
   },
   "repository": {
     "type": "git",
