@@ -1,3 +1,4 @@
+const { exec } = require('child_process');
 const path = require('path');
 
 module.exports = (env, options) => {
