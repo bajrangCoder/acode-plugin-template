@@ -30,6 +30,22 @@ module.exports = (env, options) => {
     module: {
       rules,
     },
+    plugins: [
+      {
+        apply: (compiler) => {
+          compiler.hooks.afterDone.tap('pack-zip', () => {
+            // run pack-zip.js
+            exec('node .devServer/pack-zip.js', (err, stdout, stderr) => {
+              if (err) {
+                console.error(err);
+                return;
+              }
+              console.log(stdout);
+            });
+          });
+        }
+      }
+    ],
   };
 
   return [main];
