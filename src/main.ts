@@ -1,12 +1,10 @@
-//import acode from '../typings/acode';
 import plugin from '../plugin.json';
 
 class AcodePlugin {
     public baseUrl: string | undefined;
 
-    async init($page: HTMLElement, cacheFile: any, cacheFileUrl: string) {
+    async init($page: HTMLElement, cacheFile: any, cacheFileUrl: string): Promise<void> {
         // Add your initialization code here
-        window.alert("hi")
     }
 
     async destroy() {
@@ -16,12 +14,12 @@ class AcodePlugin {
 
 if(window.acode) {
     const acodePlugin = new AcodePlugin();
-    acode.setPluginInit(plugin.id, (baseUrl: string, $page: any, { cacheFileUrl, cacheFile }: any) => {
+    acode.setPluginInit(plugin.id, async (baseUrl: string, $page: HTMLElement, { cacheFileUrl, cacheFile }: any) => {
         if(!baseUrl.endsWith('/')) {
             baseUrl += '/';
         }
         acodePlugin.baseUrl = baseUrl;
-        acodePlugin.init($page, cacheFile, cacheFileUrl);
+        await acodePlugin.init($page, cacheFile, cacheFileUrl);
     });
     acode.setPluginUnmount(plugin.id, () => {
         acodePlugin.destroy();

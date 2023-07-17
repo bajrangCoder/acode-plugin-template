@@ -4,7 +4,7 @@
   "description": "Template for Acode plugin",
   "main": "dist/main.js",
   "repository": "https://github.com/deadlyjack/acode-plugin.git",
-  "author": "Ajit <me@ajitkumar.dev>",
+  "author": "Raunak Raj",
   "license": "MIT",
   "dependencies": {
     "global": "^4.4.0",

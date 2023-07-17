@@ -1,9 +1,9 @@
 type Input = string;
 type Strings = string[];
 
-export default acode;
+declare var acode: Acode;
 
-declare class acode {
+interface Acode {
     /**
      * Define a module
      * @param {string} name
@@ -19,7 +19,11 @@ declare class acode {
 
     setLoadingMessage(message: string): void;
 
-    setPluginInit(id: string, initFunction: (baseUrl: string, $page: HTMLElement, options?: any) => Promise<void>, settings: any): void;
+    setPluginInit(
+        id: string,
+        initFunction: (baseUrl: string, $page: HTMLElement, options?: any) => Promise<void>,
+        settings?: any
+    ): void;
 
     getPluginSettings(id: string): any;
 
@@ -113,10 +117,4 @@ declare class acode {
     >;
     
     toInternalUrl(url: string): Promise<string>;
-}
-
-declare global {
-    interface Window {
-        acode: acode;
-    }
 }
