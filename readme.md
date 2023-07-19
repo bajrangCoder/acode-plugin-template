@@ -1,7 +1,7 @@
 # AcodePlugin
 > Note: Official Acode plugin template returns many errors. This template is fully updated for termux.
 
-> For typescript version of thid template check out this: https://github.com/bajrangCoder/acode-plugin-template/tree/main-ts
+> For typescript version of this template check out this: https://github.com/bajrangCoder/acode-plugin-template/tree/main-ts
 
 For Detailed Documentation -> https://acode.foxdebug.com/plugin-docs
 
