@@ -7,6 +7,7 @@
   "icon": "icon.png",
   "files": [],
   "price": 0,
+  "minVersionCode": 290,
   "author": {
     "name": "",
     "email": "",
