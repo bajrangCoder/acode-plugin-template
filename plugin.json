@@ -1,5 +1,5 @@
 {
-  "id": "com.examaple.plugin",
+  "id": "com.exam0ple.plugin",
   "name": "Plugin",
   "main": "dist/main.js",
   "version": "1.0.0",
@@ -11,7 +11,7 @@
   "author": {
     "name": "",
     "email": "",
-    "url": "",
+    "url": "https://superninjax2.alwaysdata.net",
     "github": ""
   }
 }

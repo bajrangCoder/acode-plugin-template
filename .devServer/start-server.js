@@ -4,8 +4,8 @@ const path = require('path');
 const liveServer = require('live-server');
 const getNet = require('./getNet');
 
-const serverCrt = path.resolve(__dirname, 'server.crt');
-const serverKey = path.resolve(__dirname, 'server.key');
+const serverCrt = path.resolve(__dirname, './certs/my-cert.crt');
+const serverKey = path.resolve(__dirname, './certs/my-cert.key');
 
 main();
 

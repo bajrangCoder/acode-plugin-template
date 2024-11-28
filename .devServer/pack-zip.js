@@ -12,13 +12,13 @@ if (!fs.existsSync(readmeDotMd)) {
 }
 
 // create zip file of dist folder
-
+console.log("starting loading files")
 const zip = new jszip();
 
 zip.file('icon.png', fs.readFileSync(iconFile));
 zip.file('plugin.json', fs.readFileSync(pluginJSON));
 zip.file('readme.md', fs.readFileSync(readmeDotMd));
-
+console.log("finished loading files")
 loadFile('', distFolder);
 
 zip

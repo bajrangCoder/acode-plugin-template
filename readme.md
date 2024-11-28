@@ -1,28 +1,40 @@
-# AcodePlugin
+# Acode Plugin template 
 > Note: Official Acode plugin template returns many errors. This template is fully updated for termux.
 
 > For typescript version of this template check out this: https://github.com/bajrangCoder/acode-plugin-template/tree/main-ts
 
 For Detailed Documentation -> https://acode.foxdebug.com/plugin-docs
 
+==And the community documentation== 
+==https://acode-plugin-docs.vercel.app/docs/getting-started/create-plugin==
+
 Official Template: https://github.com/deadlyjack/acode-plugin
 
-## Use
+## How to use it
 Clone this repo
-```
-https://github.com/bajrangCoder/acode-plugin-template.git
-```
-Enter in the clonned repo
-```
-cd acode-plugin-template
-```
-Install node packages
-```
-npm install
-```
-For starting dev server
-```
-npm run start-dev
+```bash
+git clone --depth 1 https://github.com/bajrangCoder/acode-plugin-template.git
 ```
 
-**Note:** Dev server works as a automatic webpack compiler
+Enter in the cloned repo
+```bash
+cd acode-plugin-template
+```
+
+Install node packages
+```bash
+npm install
+```
+
+
+For starting dev server
+```bash
+npm run dev
+```
+
+For running production 
+```bash
+npm run build:release
+```
+
+**Note:** Dev server works as a automatic esbuild compiler

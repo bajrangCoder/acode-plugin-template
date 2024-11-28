@@ -4,9 +4,9 @@
   "description": "Latest Plugin Template For Acode",
   "main": "dist/main.js",
   "scripts": {
-    "start-dev": "node .devServer/start-dev",
-    "build": "webpack && node .devServer/pack-zip.js",
-    "build-release": "webpack --mode production && node pack-zip.js"
+    "dev": "node .devServer/start-dev",
+    "build": "esbuild ./src/main.js --bundle --outdir=dist --format=esm --target=es6 --loader:.js=jsx",
+    "build:release": "esbuild ./src/main.js --bundle --outdir=dist --format=esm --target=es6 --loader:.js=jsx --minify && node .devServer/pack-zip.js"
   },
   "repository": {
     "type": "git",
@@ -21,15 +21,20 @@
   "dependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",
+    "@babel/helpers": "^7.26.0",
     "@babel/plugin-transform-runtime": "^7.19.6",
     "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.0",
     "@types/ace": "^0.0.50",
+    "babel-loader": "^9.1.0",
+    "esbuild": "^0.24.0",
+    "html-tag-js": "^1.1.22",
     "ip": "^1.1.8",
     "jszip": "^3.10.1",
     "live-server": "^1.2.2",
-    "html-tag-js": "^1.1.22",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
+  },
+  "devDependencies": {
+    "ncp": "^2.0.0"
   }
 }
